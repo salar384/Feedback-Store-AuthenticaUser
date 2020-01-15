@@ -16,7 +16,7 @@ import com.demo.authenticate.model.AuthenticUser;
 import com.demo.authenticate.services.AuthenticUserRestService;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/restUsers")
 public class AuthenticUserRestController {
 
 	@Autowired

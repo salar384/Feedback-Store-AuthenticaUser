@@ -41,6 +41,9 @@ public class AuthenticUserServiceImpl implements AuthenticUserService {
 		String username= request.getParameter("username");
 		String password =  request.getParameter("password");
 		List<AuthenticUser> users= repo.findByUsernameAndPassword(username,password );
+		if(users==null || users.isEmpty()) {
+			return null;
+		}
 	     return users.get(0);
 	}
 	
